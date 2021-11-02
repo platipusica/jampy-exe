@@ -27,10 +27,12 @@ SET TRACKS_SOLD = (SELECT SUM(QUANTITY) FROM DEMO_INVOICE_TABLE T WHERE T.TRACK 
 with huge dataset, the above update will take “forever” to finish. Not only that! Showing ALL Invoice details might be slow.
 So how do we speed this up and demonstrate >1000x faster performance?
 
-We can add one single index on Application Builder/Details/InvoiceTable, on the right hand side Indices button, `track` field.
+We can add one single index on `Application Builder/Details/InvoiceTable`, on the right hand side `Indices` button, `track` field.
 Profit.
 
-
+Application Builder?
+--------------------
+Yep. `localhost:8080/builder.html`
 
 Tested DB size
 ------------------------------------
