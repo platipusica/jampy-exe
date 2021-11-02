@@ -18,6 +18,19 @@ Demonstrate what?
 
 With "Data Pump" button added on Demo, one can create HUGE SQLite database and see the performance avoiding the Net!
 Closing the executable on X button erases all. 
+It also clearly demonstrates the performance when using indexes. For example, all lookups should be indexed. Hence, 
+when we do something like this:
+```
+UPDATE DEMO_TRACKS
+SET TRACKS_SOLD = (SELECT SUM(QUANTITY) FROM DEMO_INVOICE_TABLE T WHERE T.TRACK = DEMO_TRACKS.ID AND T.DELETED = 0)
+```
+with huge dataset, the above update will take “forever” to finish. Not only that! Showing ALL Invoice details might be slow.
+So how do we speed this up and demonstrate >1000x faster performance?
+
+We can add one single index on Application Builder/Details/InvoiceTable, on the right hand side Indices button, `track` field.
+Profit.
+
+
 
 Tested DB size
 ------------------------------------
