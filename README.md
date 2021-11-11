@@ -38,3 +38,10 @@ Tested DB size
 ------------------------------------
 
 We tested DB File size in bytes :  4570799104
+
+License
+------------------------------------
+
+MIT License.
+
+
