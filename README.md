@@ -17,6 +17,8 @@ and:
 python pyinstxtractor/pyinstxtractor.py jampy_win_64.exe
 ```
 
+The content is from https://github.com/jam-py/jam-py, jam and demo folder.
+
 
 Why packaged as EXE?
 ------------------------------------
