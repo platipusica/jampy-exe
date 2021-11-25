@@ -8,6 +8,16 @@ Than navigate to Jam.py Application folder, copy jam folder from Jam.py distribu
 pyinstaller -c -F --onefile --noconfirm --add-data "demo.sqlite;." --add-data "admin.sqlite;." --add-data "locks;locks" --add-data "js;js" --add-data "css;css" --add-data "reports;reports" --add-data "jam;jam" --add-data "static;static" --add-data "index.html;." --add-data "server.py;."  server.py --name=jampy_win_64.exe
 ```
 
+To unpack this EXE
+--------------------
+Download https://github.com/extremecoders-re/pyinstxtractor
+and:
+
+```
+python pyinstxtractor/pyinstxtractor.py jampy_win_64.exe
+```
+
+
 Why packaged as EXE?
 ------------------------------------
 
