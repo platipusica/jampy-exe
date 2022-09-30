@@ -4,7 +4,11 @@ Jam.py Demo v5.4.112 package as EXE
 To run this EXE
 --------------------
 
-Just download and double click on it. It is safe. Visit the Application by pointing Web browser to localhost:8080
+Just download and double click on it. It is safe. Visit the Application by pointing the Web browser to localhost:8080
+
+It is more or less the same Application as in here: https://jampyapp.pythonanywhere.com/
+
+With added "Data pump" to specifically demonstrate the speed of Jam.py platform.
 
 How to package any Jam.py Application
 --------------------------------------
