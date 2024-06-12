@@ -43,7 +43,7 @@ jobs:
           #   ASSET_MIME: application/zip
           - os: windows-latest
             TARGET: windows
-            CMD_BUILD: pyinstaller -c -F --onefile --noconfirm --add-data "demo.sqlite;." --add-data "admin.sqlite;." --add-data "locks;locks" --add-data "js;js" --add-data "css;css" --add-data "reports;reports" --add-data "jam;jam" --add-data "static;static" --add-data "index.html;." --add-data "server.py;."  server.py
+            CMD_BUILD: cd demo && pyinstaller -c -F --onefile --noconfirm --add-data "demo.sqlite;." --add-data "admin.sqlite;." --add-data "locks;locks" --add-data "js;js" --add-data "css;css" --add-data "reports;reports" --add-data "jam;jam" --add-data "static;static" --add-data "index.html;." --add-data "server.py;."  server.py
             OUT_FILE_NAME: jampy_win_64.exe
             ASSET_MIME: application/vnd.microsoft.portable-executable
     steps:
