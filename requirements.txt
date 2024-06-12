@@ -1,4 +1,5 @@
 cryptography
 build
+sqlalchemy
 pyinstaller
 pyinstaller-hooks-contrib
