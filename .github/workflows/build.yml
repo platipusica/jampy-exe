@@ -9,11 +9,11 @@ jobs:
     strategy:
       matrix:
         include:
-          # - os: macos-latest
-          #   TARGET: macos
-          #   CMD_BUILD: pyinstaller -F -w -n clipster -i resources/clipster.icns cli.py && cd dist/ && zip -r9 clipster clipster.app/
-          #   OUT_FILE_NAME: clipster.zip
-          #   ASSET_MIME: application/zip
+          - os: macos-latest
+            TARGET: macos
+            CMD_BUILD: pyinstaller --paths jam/third_party/ --hidden-import sqlalchemy --hidden-import pyjsparser --hidden-import smtplib --hidden-import jam --hidden-import esprima --hidden-import werkzeug -c -F --onefile --noconfirm --add-data "demo.sqlite:." --add-data "admin.sqlite:." --add-data "locks:locks" --add-data "js:js" --add-data "css:css" --add-data "reports:reports" --add-data "jam:jam" --add-data "static:static" --add-data "index.html:." --add-data  "server.py:."  server.py --name=jampy.zip
+            OUT_FILE_NAME: jampy.zip
+            ASSET_MIME: application/zip
           - os: windows-latest
             TARGET: windows
             CMD_BUILD: cd demo && pyinstaller --paths jam/third_party/ --hidden-import sqlalchemy --hidden-import pyjsparser --hidden-import smtplib --hidden-import jam --hidden-import esprima --hidden-import werkzeug -c -F --onefile --noconfirm --add-data "demo.sqlite;." --add-data "admin.sqlite;." --add-data "locks;locks" --add-data "js;js" --add-data "css;css" --add-data "reports;reports" --add-data "jam;jam" --add-data "static;static" --add-data "index.html;." --add-data  "server.py;."  server.py --name=jampy_win_64.exe
