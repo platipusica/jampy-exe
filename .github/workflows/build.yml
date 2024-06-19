@@ -11,8 +11,8 @@ jobs:
         include:
           - os: macos-latest
             TARGET: macos
-            CMD_BUILD: cd demo && pyinstaller --paths jam/third_party/ --hidden-import sqlalchemy --hidden-import pyjsparser --hidden-import smtplib --hidden-import jam --hidden-import esprima --hidden-import werkzeug -c -F --onefile --noconfirm --add-data "demo.sqlite:." --add-data "admin.sqlite:." --add-data "locks:locks" --add-data "js:js" --add-data "css:css" --add-data "reports:reports" --add-data "jam:jam" --add-data "static:static" --add-data "index.html:." --add-data  "server.py:."  server.py --name=jampy.zip
-            OUT_FILE_NAME: jampy.zip
+            CMD_BUILD: cd demo && pyinstaller --paths jam/third_party/ --hidden-import sqlalchemy --hidden-import pyjsparser --hidden-import smtplib --hidden-import jam --hidden-import esprima --hidden-import werkzeug -c -F --onefile --noconfirm --add-data "demo.sqlite:." --add-data "admin.sqlite:." --add-data "locks:locks" --add-data "js:js" --add-data "css:css" --add-data "reports:reports" --add-data "jam:jam" --add-data "static:static" --add-data "index.html:." --add-data  "server.py:."  server.py  --target-arch x86_64 --name=jampy_x86_64.zip
+            OUT_FILE_NAME: jampy_x86_64.zip
             ASSET_MIME: application/zip
           - os: windows-latest
             TARGET: windows
